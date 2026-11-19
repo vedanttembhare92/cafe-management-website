@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | CoffeeHub</title>
+    <link rel="stylesheet" href="menu.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="topbar">
+
+        <a href="index.html" class="wordmark">CoffeeHub</a>
+
+        <nav aria-label="Main">
+            <a href="index.html">Home</a>
+            <a href="menu.html" class="current">Menu</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </header>
+
+    <!-- Menu Hero -->
+    <section class="menu-hero">
+
+        <h1>Our Menu</h1>
+
+        <p>Handcrafted coffee, cold brews and fresh bites, made to order.</p>
+
+        <div class="menu-search">
+            <input type="search" id="menuSearch" placeholder="Search the menu" aria-label="Search the menu">
+        </div>
+
+    </section>
+
+    <!-- Menu Items -->
+    <main class="menu-page">
+
+        <div class="filter-bar" role="group" aria-label="Menu categories">
+
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="hot">Hot Coffee</button>
+            <button class="filter-btn" data-filter="cold">Cold Coffee</button>
+            <button class="filter-btn" data-filter="tea">Tea &amp; More</button>
+            <button class="filter-btn" data-filter="bites">Bites</button>
+
+        </div>
+
+        <div class="menu-list">
+
+            <article class="menu-item" data-category="hot">
+                <div class="item-top"><h3>Espresso</h3><span class="leader"></span><span class="price">$4.99</span></div>
+                <p>A short, strong shot pulled from our house blend.</p>
+            </article>
+
+            <article class="menu-item" data-category="hot">
+                <div class="item-top"><h3>Cappuccino</h3><span class="leader"></span><span class="price">$8.99</span></div>
+                <p>Espresso with steamed milk and a thick layer of foam.</p>
+            </article>
+
+            <article class="menu-item" data-category="hot">
+                <div class="item-top"><h3>Latte</h3><span class="leader"></span><span class="price">$7.99</span></div>
+                <p>Smooth espresso with plenty of steamed milk.</p>
+            </article>
+
+            <article class="menu-item" data-category="hot">
+                <div class="item-top"><h3>Mocha</h3><span class="leader"></span><span class="price">$9.99</span></div>
+                <p>Espresso, dark chocolate and steamed milk, topped with cream.</p>
+            </article>
+
+            <article class="menu-item" data-category="hot">
+                <div class="item-top"><h3>Americano</h3><span class="leader"></span><span class="price">$5.99</span></div>
+                <p>Espresso topped with hot water for a clean, bold cup.</p>
+            </article>
+
+            <article class="menu-item" data-category="cold">
+                <div class="item-top"><h3>Iced Latte</h3><span class="leader"></span><span class="price">$8.49</span></div>
+                <p>Espresso and cold milk poured over ice.</p>
+            </article>
+
+            <article class="menu-item" data-category="cold">
+                <div class="item-top"><h3>Cold Brew</h3><span class="leader"></span><span class="price">$7.49</span></div>
+                <p>Steeped for 18 hours. Low acidity, naturally sweet.</p>
+            </article>
+
+            <article class="menu-item" data-category="cold">
+                <div class="item-top"><h3>Caramel Frappe</h3><span class="leader"></span><span class="price">$9.49</span></div>
+                <p>Blended coffee, caramel sauce and ice, finished with whipped cream.</p>
+            </article>
+
+            <article class="menu-item" data-category="tea">
+                <div class="item-top"><h3>Masala Chai</h3><span class="leader"></span><span class="price">$5.49</span></div>
+                <p>Black tea simmered with ginger, cardamom and milk.</p>
+            </article>
+
+            <article class="menu-item" data-category="tea">
+                <div class="item-top"><h3>Green Tea</h3><span class="leader"></span><span class="price">$4.49</span></div>
+                <p>Light and fresh, served hot with a slice of lemon.</p>
+            </article>
+
+            <article class="menu-item" data-category="tea">
+                <div class="item-top"><h3>Hot Chocolate</h3><span class="leader"></span><span class="price">$6.99</span></div>
+                <p>Rich cocoa and steamed milk. Caffeine-free.</p>
+            </article>
+
+            <article class="menu-item" data-category="bites">
+                <div class="item-top"><h3>Butter Croissant</h3><span class="leader"></span><span class="price">$4.99</span></div>
+                <p>Flaky, golden and baked fresh every morning.</p>
+            </article>
+
+            <article class="menu-item" data-category="bites">
+                <div class="item-top"><h3>Blueberry Muffin</h3><span class="leader"></span><span class="price">$4.49</span></div>
+                <p>Soft inside, with a crisp sugar top.</p>
+            </article>
+
+            <article class="menu-item" data-category="bites">
+                <div class="item-top"><h3>Grilled Cheese Sandwich</h3><span class="leader"></span><span class="price">$7.99</span></div>
+                <p>Three cheeses on toasted sourdough.</p>
+            </article>
+
+        </div>
+
+        <p class="no-results" id="noResults" hidden>
+            No items match your search. Try another name or pick a different category.
+        </p>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 CoffeeHub. All rights reserved.</p>
+        <p>
+            <a href="about.html">About</a> |
+            <a href="contact.html">Contact Us</a>
+        </p>
+    </footer>
+
+    <script src="menu.js"></script>
+
+</body>
+</html>

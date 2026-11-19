@@ -1,0 +1,124 @@
+/* menu.css: everything the menu page needs. No other stylesheet required. */
+
+:root {
+    --accent: #6f4e37;
+    --bg: #f5f4f2;
+    --text: #2b2118;
+    --muted: #8a7b6d;
+    --line: rgba(111, 78, 55, 0.35);
+    --serif: Georgia, "Times New Roman", serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--serif);
+    line-height: 1.6;
+}
+
+a { color: inherit; text-decoration: none; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+/* ---------- Top bar ---------- */
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px 30px;
+    padding: 18px 6%;
+    border-bottom: 1px solid var(--line);
+}
+
+.wordmark { font-size: 1.5rem; font-weight: 700; color: var(--accent); }
+
+.topbar nav { display: flex; flex-wrap: wrap; gap: 8px 32px; }
+
+.topbar nav a { color: var(--muted); transition: color 0.2s; }
+.topbar nav a:hover,
+.topbar nav a.current { color: var(--text); }
+.topbar nav a.current { border-bottom: 2px solid var(--accent); }
+
+/* ---------- Page header ---------- */
+.menu-hero { text-align: center; padding: 70px 20px 30px; }
+
+.menu-hero h1 { font-size: clamp(2.4rem, 6vw, 3.6rem); margin-bottom: 12px; }
+
+.menu-hero p { color: var(--muted); max-width: 52ch; margin: 0 auto 26px; }
+
+.menu-search input {
+    width: min(100%, 420px);
+    padding: 13px 22px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--text);
+    font: inherit;
+}
+
+/* ---------- Filter tabs ---------- */
+.menu-page { max-width: 1100px; margin: 0 auto; padding: 20px 24px 80px; }
+
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 48px;
+}
+
+.filter-btn {
+    padding: 10px 22px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--text);
+    font: inherit;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.filter-btn:hover { background: rgba(111, 78, 55, 0.08); }
+.filter-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+/* ---------- Menu items ---------- */
+.menu-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 34px 60px;
+}
+
+.menu-item[hidden], .no-results[hidden] { display: none; }
+
+.item-top { display: flex; align-items: baseline; gap: 10px; }
+.item-top h3 { font-size: 1.15rem; }
+
+.leader {
+    flex: 1;
+    min-width: 20px;
+    border-bottom: 2px dotted var(--line);
+    transform: translateY(-4px);
+}
+
+.price { font-weight: 700; color: var(--accent); white-space: nowrap; }
+
+.menu-item p { margin-top: 6px; color: var(--muted); font-size: 0.95rem; max-width: 46ch; }
+
+.no-results { text-align: center; color: var(--muted); margin-top: 30px; }
+
+/* ---------- Footer ---------- */
+footer {
+    text-align: center;
+    padding: 28px 20px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 800px) {
+    .menu-list { grid-template-columns: 1fr; gap: 28px; }
+    .menu-hero { padding-top: 50px; }
+}
